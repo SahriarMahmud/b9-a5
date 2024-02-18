@@ -104,14 +104,16 @@
             </div>
         </div>
     </header>
-    <main class="font-raleway mt-24 min-h-screen main-border bg-[#F7F8F8]">
+    <!-- page that will vanish after completion of process -->
+    <main class="font-raleway mb-11 pb-5 mt-24 min-h-screen main-border bg-[#F7F8F8]">
         <!-- bus info -->
         <div class="text-center my-11">
             <h1 class="font-extrabold pt-16 pb-8 text-5xl">S. Paribahan</h1>
             <p class="font-semibold text-lg pb-7">We offer top quality coach services from Dhaka to Sylhet and to many
                 more destination...</p>
         </div>
-        <section class="flex font-inter mt-4 justify-around mx-8 body-border bg-white">
+        <!-- main section for seat selection and counting -->
+        <section class="flex divide-x divide-dotted divide-[#1DD100] font-inter mt-4 justify-around mx-8 body-border bg-white ">
             <div>
                 <div class="flex justify-between p-6">
                     <div class="flex gap-1">
@@ -146,13 +148,13 @@
                     </div>
                 </div>
             </div>
-            <div class="p-7 border-l-2 flex flex-col items-center my-auto border-l-lime-500">
+            <div class="p-7 flex flex-col items-center my-auto ">
                 <img src="images/fare.png" alt="">
                 <h2 class="text-3xl font-extrabold">550 Taka</h2>
                 <p class="font-normal text-lg">Per seat</p>
             </div>
         </section>
-        <section class="flex gap-4">
+        <section class="flex divide-x divide-dotted divide-gray-200 gap-8 justify-center mx-8 body-border mt-4 bg-white">
             <div>
                 <!-- selection panel mark -->
             <div class="py-4">
@@ -172,7 +174,9 @@
             <hr>
             <!-- seat plan -->
             <div>
-                <img class="ml-auto" src="images/wheel.svg" alt="">
+                <div class="flex justify-end p-3">
+                    <button class="bg-slate-300 w-28 btn"><img  src="images/wheel.svg" alt=""></button>
+                </div>
                 <div class="flex font-inter justify-stretch px-3 py-3 gap-8">
                     <div class="grid grid-cols-2 gap-3">
                         <p class="seat-name ">A <button id="A1" class="btn seat w-28">A1</button></p>
@@ -222,46 +226,102 @@
             </div>
             </div>
             <!-- seat price calculation part -->
-            <div class="py-4">
-                <h1 class="text-xl font-bold">Select Your Seat</h1>
+            <div class="py-4 font-inter pl-4">
+                <h1 class="text-xl pb-4 pl-3 font-bold">Select Your Seat</h1>
                 <hr>
-                <div>
-                    <div class="overflow-x-auto">
-                        <table class="table">
-                            <!-- head -->
-                            <thead>
-                                <tr>
-                                    <!-- <th></th> -->
-                                    <th class="text-lg">Seat <span class="bg-[#1DD100] text-white text-lg font-bold">0</span></th>
-                                    <th class="text-lg">Class</th>
-                                    <th class="text-lg">Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row 1 -->
-                                <tr>
-                                    <!-- <th>1</th> -->
-                                    <td>A1</td>
-                                    <td>Economy</td>
-                                    <td>550</td>
-                                </tr>
-                            </tbody>
-                             <!-- row 1 -->
-                             <tr>
-                                <!-- <th>1</th> -->
-                                <td>Total Price</td>
-                                <td></td>
-                                <td> <span>0</span></td>
-                            </tr>
-                        </table>   
+                <div class="py-4  px-4">
+                    <div class="bg-[#F7F8F8] mt-4 px-4 py-4 rounded-md">
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <!-- <th></th> -->
+                                        <th class="text-lg">Seat <span class="bg-[#1DD100] text-white text-lg font-bold">0</span></th>
+                                        <th class="text-lg">Class</th>
+                                        <th class="text-lg">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <!-- <th>1</th> -->
+                                        <td>A1</td>
+                                        <td>Economy</td>
+                                        <td>550</td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Total Price</p>
+                            <p>BDT <span>0</span></p>
+                        </div>
+                        <br>
+                        <input class="border p-2" value="" type="text" placeholder="Have any coupon ?" ><button class="w-16 text-white p-2 rounded-md btn border-none bg-[#1DD100]">apply</button>
+                        <br>
+                        <br>
+                        <div class="flex justify-between">
+                            <p>Grand Total</p>
+                            <p>BDT <span>0</span></p>
+                        </div>
                     </div>
-                    <input style="padding: 2%;" value="" type="text" placeholder="Have any coupon ?" ><button class="w-14 text-white p-1 rounded-md bg-[#1DD100]">apply</button>
-                    
+                    <br>
+                    <div> 
+                        <form>
+                            <h2>Passenger Name*</h2>
+                            <input class="p-2 w-full" type="text" name="" id="" placeholder="Enter your name">
+                            <br>
+                            <br>
+                            <h2>Phone Number*</h2>
+                            <input class="p-2 w-full" type="number" name="" id="" placeholder="Enter your phone number">
+                            <br>
+                            <br>
+                            <h2>Email ID</h2>
+                            <input class="w-full p-2" type="email" name="" id="" placeholder="Enter your email id">
+                            <br>
+                            <br>
+                            <button class="w-full btn bg-[#1DD100] text-white">Next</button>
+                        </form>  
+                        <div class="flex justify-between gap-6">
+                            <div>
+                                <a class="underline font-light text-sm" href="">Terms and Conditions</a>
+                            </div>
+                            <div>
+                                <a class="text-sm underline font-light" href="">Cancellation Policy</a>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="font-inter mt-3 bg-[#030712] text-white p-14">
+        <section class="flex justify-between mb-4">
+            <div>
+                <h1 class="font-extrabold text-2xl font-raleway">S-Ticket</h1>
+                <p class="font-light">S-ticket is a digital platform to provide you <br> an amazing ticket purchasing experience.</p>
+            </div>
+            <div>
+                <h1>Download our app</h1>
+                <div class="flex gap-1 p-1 border-2 border-solid">
+                    <img src="images/playstore.png" alt="">
+                    <img src="images/Group.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="mt-4 flex justify-between">
+            <div>
+                <p class="text-xs">@all rights reserved, S-Ticket services limited 2024</p>
+            </div>
+            <div class="flex justify-evenly gap-3 text-xs">
+                <div><a href="">Terms & Conditions</a></div>
+                <div><a href="">Return & refund policy</a></div>
+                <div><a href="">Privacy policy</a></div>
+            </div>
+        </section>
+    </footer>
 
     <script src="scripts/utility.js"></script>
 </body>
