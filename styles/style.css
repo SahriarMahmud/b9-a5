@@ -6,3 +6,22 @@
 .font-inter{
     font-family: "Inter", sans-serif;
 }
+.curve{
+    border-start-start-radius: -3rem;
+}
+
+.main-border{
+    border-top-left-radius: 9%;
+    border-top-right-radius: 9%;
+    border-top: 2px solid #1DD100;
+}
+
+.body-border{
+    border: 1px solid white;
+    border-radius:4%;
+}
+
+/* .seat-name{
+    padding-top: 4px;
+    padding-left: 4px;
+} */
