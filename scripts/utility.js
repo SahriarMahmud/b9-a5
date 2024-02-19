@@ -26,3 +26,9 @@ function continueHome(){
 //     const coloR = '#1DD100';
 //     return coloR;
 // }
+    
+// }
+// function buttonWork(){
+//     seatIncrease()
+//     colorChange()
+// }
