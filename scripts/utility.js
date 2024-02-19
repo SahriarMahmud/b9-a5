@@ -21,14 +21,3 @@ function continueHome(){
     return lastUpdate
 }
     
-
-// function colorChange(){
-//     const coloR = '#1DD100';
-//     return coloR;
-// }
-    
-// }
-// function buttonWork(){
-//     seatIncrease()
-//     colorChange()
-// }
